@@ -3,31 +3,108 @@ h1, h2{
 }
 
 h1{
-    margin:40px;
+    margin-top:20px;
+    margin-bottom:50px;
+    text-shadow: -5px 2px rgb(206, 200, 200);
 }
 
 body{
+    /*#FFF0E5*/
     background-color: #FFF0E5;
 }
-.selection-menu{
-    border:1px solid black;
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+.navigation ul{
+    list-style: none;
+    padding:10px;
+    margin:0px;
+
+}
+
+.navigation li{
+
+    position:relative;
+    display:inline;
+    margin-left:5px;
+    margin-right: 5px;
+    margin-top:0px;
+    bottom:8px;
+}
+
+.navigation{
+    height:60px;
+    width:100%;
+    margin:0px;
     
+}
+.navigation img{
+    height:40px;
+    width:40px;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+.selection-menu{
+    border:0px solid black;
     display:flex;
     justify-content:space-evenly;
-    justify-items:;
 }
 
 .selection-box{
-    background-color: ;
+
     position:relative;
-    border: 1px solid black;
     width: 200px;
     height: 400px;
+    margin:0px;
+    border: 1px solid black;
+    background:rgb(255, 242, 168);
+
+    animation-name:selection-hover-out;
+    animation-duration:0.25s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes selection-hover-out{
+    0%{
+        left:10px;
+        bottom:10px;
+        box-shadow: -15px 10px 0px 0px black;
+        background:rgb(248, 231, 135);
+    }
+    100%{
+        left:0;
+        bottom:0;
+        box-shadow: 0px 0px 0px 0px black;
+        background:rgb(255, 242, 168);
+    }
+}
+
+.selection-box:hover{
+
+    animation-name: selection-hover;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
     
 }
-.selection-box:hover{
-    background:rgb(255, 242, 168);
-    box-shadow: -10px 10px 0px 0px black;
+@keyframes selection-hover{
+    0%{
+        left:0;
+        bottom:0;
+        box-shadow: 0px 0px 0px 0px black;
+        background:rgb(255, 242, 168);
+    }
+    100%{
+        left:10px;
+        bottom:10px;
+        box-shadow: -15px 10px 0px 0px black;
+        background:rgb(248, 231, 135);
+        
+    }
 }
 .selection-box img{
     display:block;
