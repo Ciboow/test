@@ -110,6 +110,13 @@ a{
         
     }
 }
+.selection-box:active{
+    animation-name: selection-hover-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+
 .selection-box img{
     display:block;
     margin-top:55%;
